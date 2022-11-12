@@ -10,7 +10,6 @@ class Solution(object):
         if len(s) == 0 or len(s) == 1:
             return False
 
-
         if (s[0] == ")") | (s[0] == "]") | (s[0] == "}"):
             return False
 
@@ -25,7 +24,7 @@ class Solution(object):
             if opening_condition:
                 queue.insert(0, s[i])
 
-            if (closing_condition) and len(queue) == 0:
+            if closing_condition and len(queue) == 0:
                 return False
 
             if (closing_condition) and hashmap_parentheses[s[i]] != queue[0]:
@@ -33,7 +32,6 @@ class Solution(object):
 
             if closing_condition:
                 queue = queue[1:]
-
 
         if len(queue) != 0:
             return False
@@ -44,4 +42,3 @@ class Solution(object):
 solution = Solution()
 
 print(solution.isValid("()()]"))
-
