@@ -19,4 +19,4 @@ class Solution:
 
 
 solution = Solution()
-print(solution.maxProfit([2,3,4, 1, 7, 9]))
+print(solution.maxProfit([2, 3, 4, 1, 7, 9]))
