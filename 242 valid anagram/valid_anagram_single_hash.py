@@ -8,10 +8,7 @@ class Solution:
             return False
 
         for char_s in s:
-            if char_s not in hash_s:
-                hash_s[char_s] = 1
-            else:
-                hash_s[char_s] += 1
+            hash_s[char_s] = hash_s.get(char_s, 0) + 1
 
         for char_t in t:
             if char_t not in hash_s:

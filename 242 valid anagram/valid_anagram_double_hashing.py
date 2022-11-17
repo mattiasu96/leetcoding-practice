@@ -12,15 +12,8 @@ class Solution:
             return False
 
         for char_s, char_t in zip(s, t):
-            if char_s not in hash_s:
-                hash_s[char_s] = 1
-            else:
-                hash_s[char_s] += 1
-
-            if char_t not in hash_t:
-                hash_t[char_t] = 1
-            else:
-                hash_t[char_t] += 1
+            hash_s[char_s] = hash_s.get(char_s, 0) + 1
+            hash_t[char_t] = hash_t.get(char_t, 0) + 1
 
         return hash_s == hash_t
 
