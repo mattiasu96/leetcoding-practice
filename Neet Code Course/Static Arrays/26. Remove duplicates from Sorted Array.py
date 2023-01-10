@@ -1,5 +1,5 @@
 class Solution:
-    def removeDuplicates(self, nums: list[int]) -> list[int]:
+    def removeDuplicates(self, nums: list[int]) -> int:
         current_unique_value = nums[0]
         index_update = 0
 
