@@ -1,3 +1,5 @@
+# TODO: Complete this, this is not working for real
+
 class ListNode:
 
     def __init__(self, prev, nxt, val):
@@ -41,6 +43,8 @@ class MyLinkedList:
             self.head = new_node # Cambiare la logica partendo dal presupposto che mi sposto subito sul nuovo nodo
             if self.length != 0:
                 self.head.prev = new_node
+            else:
+                self.tail = self.head
             self.length += 1
             return None
 
@@ -48,7 +52,9 @@ class MyLinkedList:
             new_node = ListNode(prev=self.tail, nxt=None, val=val)
             self.tail = new_node
             if self.length != 0:
-                self.tail.next = self.tail
+                self.head.next = self.tail
+            else:
+                self.head = self.tail
             self.length += 1
             return None
 
