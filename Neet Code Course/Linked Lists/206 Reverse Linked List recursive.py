@@ -1,5 +1,6 @@
 from typing import Optional
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -23,8 +24,8 @@ class Solution:
 
             # Fix the header pointer
             return rest
-        return reverse(head)
 
+        return reverse(head)
 
 
 my_list = ListNode(1, ListNode(2, ListNode(3, None)))

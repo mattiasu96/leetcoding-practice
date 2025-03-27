@@ -3,7 +3,6 @@ class Solution:
         record = []
 
         for command in operations:
-
             if command == "+":
                 record.append(record[-1] + record[-2])  # farlo pythonic
             elif command == "D":

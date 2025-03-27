@@ -3,7 +3,6 @@ class Solution:
         record = []
 
         for command in operations:
-
             try:
                 number = int(command)
                 record.append(number)

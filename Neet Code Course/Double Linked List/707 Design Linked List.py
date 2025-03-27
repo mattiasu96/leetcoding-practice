@@ -1,7 +1,7 @@
 # TODO: Complete this, this is not working for real
 
-class ListNode:
 
+class ListNode:
     def __init__(self, prev, nxt, val):
         self.prev = prev
         self.next = nxt
@@ -9,7 +9,6 @@ class ListNode:
 
 
 class MyLinkedList:
-
     def __init__(self):
         self.head = None
         self.tail = None
@@ -40,7 +39,7 @@ class MyLinkedList:
 
         if index == 0:
             new_node = ListNode(prev=None, nxt=self.head, val=val)
-            self.head = new_node # Cambiare la logica partendo dal presupposto che mi sposto subito sul nuovo nodo
+            self.head = new_node  # Cambiare la logica partendo dal presupposto che mi sposto subito sul nuovo nodo
             if self.length != 0:
                 self.head.prev = new_node
             else:
@@ -97,6 +96,5 @@ obj = MyLinkedList()
 param_1 = obj.get(1)
 obj.addAtHead(1)
 obj.addAtTail(1)
-obj.addAtIndex(2,2)
+obj.addAtIndex(2, 2)
 obj.deleteAtIndex(1)
-
