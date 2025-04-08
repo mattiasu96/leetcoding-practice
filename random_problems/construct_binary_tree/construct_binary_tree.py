@@ -18,7 +18,7 @@ class Solution:
                 return None
 
             root = TreeNode(preorder[0])
-            mid = indices[preorder[0]] # inorder.index(preorder[0])
+            mid = indices[preorder[0]]  # inorder.index(preorder[0])
 
             root.left = construct_tree(
                 preorder=preorder[1 : mid + 1], inorder=inorder[:mid]
@@ -28,5 +28,5 @@ class Solution:
             )
 
             return root
-        
+
         return construct_tree(preorder, inorder)

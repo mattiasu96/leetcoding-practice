@@ -1,5 +1,4 @@
 from typing import Optional
-from collections import deque
 
 
 # Definition for a binary tree node.
@@ -11,27 +10,27 @@ class TreeNode:
 
 
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:
-        queue = deque()
-        order_list = []
+    def rightSideView(self, root: Optional[TreeNode]) -> list[int]:
+        queue = []
         curr = root
-        level = 0
-        if root:
-            queue.append(root)
+        result_list = []
+        if not root:
+            return []
+
+        queue.append(curr)
 
         while len(queue) > 0:
-            level_list = []
+            level_sublist = []
             for i in range(len(queue)):
-                curr = queue.popleft()
-                print(curr.val)
-                level_list.append(curr.val)
+                curr = queue.pop(0)
+                level_sublist.append(curr.val)
 
                 if curr.left:
                     queue.append(curr.left)
 
                 if curr.right:
                     queue.append(curr.right)
-            order_list.append(level_list)
-            level = level + 1
 
-        return order_list
+            result_list.append(level_sublist[-1])
+
+        return result_list
