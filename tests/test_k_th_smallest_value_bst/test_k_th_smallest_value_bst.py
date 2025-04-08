@@ -23,14 +23,13 @@ def test_first_smallest_value_root():
 
     assert result == reference
 
+
 def test_smallest_in_left_only_tree():
     root_tree = TreeNode(
         val=10,
         left=TreeNode(
             val=5,
-            left=TreeNode(
-                val=1, left=None, right=None
-            ),
+            left=TreeNode(val=1, left=None, right=None),
             right=None,
         ),
         right=None,

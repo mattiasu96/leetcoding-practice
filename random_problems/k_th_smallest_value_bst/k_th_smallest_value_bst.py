@@ -18,16 +18,11 @@ class Solution:
             while curr:
                 stack.append(curr)
                 curr = curr.left
-            
+
             curr = stack.pop()
-            k = k-1
+            k = k - 1
 
-            if k==0:
+            if k == 0:
                 return curr.val
-            
+
             curr = curr.right
-
-
-        
- 
-
