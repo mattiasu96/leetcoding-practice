@@ -1,7 +1,6 @@
 from random_problems.path_sum.path_sum import TreeNode, Solution
 
 
-
 def test_sum_is_equal_simple_tree():
     root_tree = TreeNode(
         val=10,
