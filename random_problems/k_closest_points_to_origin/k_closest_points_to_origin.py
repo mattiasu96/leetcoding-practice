@@ -21,6 +21,7 @@ class Solution:
 
         return res
 
+
 solution = Solution()
 
-print(solution.kClosest([[1,3],[-2,2]], 1))
+print(solution.kClosest([[1, 3], [-2, 2]], 1))
