@@ -15,7 +15,9 @@ class LRUCache:
         self.queue_tail = None
 
     def _add_new_node(self, key: int, value: int):
-        new_node = ListNode(key, value, None, self.queue_head) # Need to connect the nodes!
+        new_node = ListNode(
+            key, value, None, self.queue_head
+        )  # Need to connect the nodes!
         self.queue_head = new_node
         if self.queue_tail is None:
             self.queue_tail = new_node
@@ -35,12 +37,11 @@ class LRUCache:
         self.queue_head.prev = curr
         curr.next = self.queue_head
         self.queue_head = curr
-    
+
     def _delete(self):
         del self.cache[self.queue_tail.key]
         self.queue_tail = self.queue_tail.prev
         self.queue_tail.next = None
-        
 
     def get(self, key: int) -> int:
         if key not in self.cache.keys():
