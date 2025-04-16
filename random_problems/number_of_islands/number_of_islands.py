@@ -27,6 +27,6 @@ class Solution:
             for col in range(len(grid[0])):
                 if grid[row][col] == 1 and (row, col) not in visited_land:
                     number_of_islands += 1
-                    self.matrix_dfs(grid, row, col, visited_land)
+                    visited_land = self.matrix_dfs(grid, row, col, visited_land)
 
         return number_of_islands
